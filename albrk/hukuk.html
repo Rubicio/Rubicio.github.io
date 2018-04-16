@@ -21,12 +21,15 @@
         <div class="container">
             <span class="skype-button rounded" data-bot-id="317aadf5-7a40-4ffd-834e-aca4ea37d100" data-text="Konuş Benimle"></span>
             <div class="skype-chat" data-can-upload-file="false"></div>
-            <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+            <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js" onload="startChat"></script>
             <script>
-            SkypeWebControl.SDK.Chat.startChat({
-                ConversationId: '317aadf5-7a40-4ffd-834e-aca4ea37d100',
-                ConversationType: 'agent'
-            });	
+            function startChat() {
+                
+                SkypeWebControl.SDK.Chat.startChat({
+                    ConversationId: '317aadf5-7a40-4ffd-834e-aca4ea37d100',
+                    ConversationType: 'agent'
+                });	
+            }
             </script>
         </div>
     </body>
