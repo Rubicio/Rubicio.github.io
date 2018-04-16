@@ -16,21 +16,19 @@
         margin: 0; padding: 0;
         }
         </style>
-        <script>
-        function startChat() {
-            
-            SkypeWebControl.SDK.Chat.startChat({
-                ConversationId: '317aadf5-7a40-4ffd-834e-aca4ea37d100',
-                ConversationType: 'agent'
-            });	
-        }
-        </script>
+        <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="container">
             <span class="skype-button rounded" data-bot-id="317aadf5-7a40-4ffd-834e-aca4ea37d100" data-text="Konuş Benimle"></span>
             <div class="skype-chat" data-can-upload-file="false"></div>
-            <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js" onload="startChat()"></script>
         </div>
+        <script>
+        $(function() {
+            
+            $('.skype-button').click();
+        });
+        </script>
     </body>
 </html>
