@@ -18,11 +18,14 @@
         </style>
         <script>
         function startChat() {
-
-            SkypeWebControl.SDK.Chat.startChat({
-                ConversationId: '317aadf5-7a40-4ffd-834e-aca4ea37d100',
-                ConversationType: 'agent'
-            });	
+            
+            setTimeout(function () {
+                
+                SkypeWebControl.SDK.Chat.startChat({
+                    ConversationId: '317aadf5-7a40-4ffd-834e-aca4ea37d100',
+                    ConversationType: 'agent'
+                });	
+            }, 2000);
         }
         </script>
     </head>
